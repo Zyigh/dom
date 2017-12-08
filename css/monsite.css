@@ -68,7 +68,6 @@ header nav ul {
 header nav ul li {
     background: deeppink;
     padding: 3px 8px;
-    cursor: pointer;
 }
 h1 {
     font-size: 42px;
@@ -117,6 +116,14 @@ footer h2 {
     100%{opacity: 1;}
 }
 
+li {
+    cursor: pointer;
+}
+
 .barre {
     text-decoration: line-through;
+}
+
+.darkred {
+    background-color: darkred;
 }

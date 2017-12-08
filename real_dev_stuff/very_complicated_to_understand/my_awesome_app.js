@@ -1,26 +1,25 @@
-//var lis = document.querySelectorAll('main li');
-// var nav_lis = document.querySelectorAll('nav li');
-// var temp_array_for_reversing_word = [];
-//
-// for (var i = 0, only_textual_lis = lis.length -1; i < only_textual_lis; i++) {
-//     lis[i].classList.add('barre');
-// }
-//
-// var i = 0;
-// for (var len = nav_lis.length; i < len; i++) {
-//     temp_array_for_reversing_word.push(nav_lis[i].innerHTML);
-// }
-// for (--i, current_word = 0; i >= 0; --i, current_word++) {
-//     nav_lis[i].innerHTML = temp_array_for_reversing_word[current_word];
-// }
-//
+var lis = document.querySelectorAll('main li');
+var nav_lis = document.querySelectorAll('nav li');
+var temp_array_for_reversing_word = [];
+
+//for (var i = 0, only_textual_lis = lis.length -1; i < only_textual_lis; i++) {
+//    lis[i].classList.add('barre');
+//}
+var i = 0;
+for (var len = nav_lis.length; i < len; i++) {
+    temp_array_for_reversing_word.push(nav_lis[i].innerHTML)
+}
+for (--i, current_word = 0; i >= 0; --i, current_word++) {
+    nav_lis[i].innerHTML = temp_array_for_reversing_word[current_word]
+}
+
 // document.querySelector('header').setAttribute('style', 'background: lightblue');
 // document.querySelector('main').setAttribute('style', 'background: black; color: white');
 
 
 // Events
 
-//var header = document.querySelector('header');
+var header = document.querySelector('header');
 
     // On self by using global selector
 
@@ -43,11 +42,11 @@ var main = document.querySelector('main');
 
     //Intro this
 
-// header.classList.add('darkred');
-// header.addEventListener('click', function(){
-//     this.classList.toggle('darkred');
-//     main.classList.toggle('darkred');
-// });
+//header.classList.add('darkred');
+header.addEventListener('click', function(){
+    this.classList.toggle('darkred');
+    main.classList.toggle('lightblue');
+});
 
     // handle list
 
@@ -73,16 +72,23 @@ var main = document.querySelector('main');
 //    this.classList.toggle('barre');
 //}
 
-//for (var i = 0, len = lis.length; i < len - 1; i++) {
-//    lis[i].addEventListener('click', barre_le_bordel);
-//}
+for (var i = 0, len = lis.length; i < len - 1; i++) {
+    lis[i].addEventListener('click', barre_le_bordel);
+}
 
         // Remove
-//function barre_le_bordel() {
-//    this.classList.toggle('barre');
-//    this.removeEventListener('click', barre_le_bordel)
-//}
-
+function barre_le_bordel() {
+    this.classList.toggle('barre');
+    var i;
+    for (i = 0, len = lis.length; i < len - 1; i++) {
+        if (!(lis[i].classList.contains('barre'))) {
+            return;
+        }
+    }
+    for (i = 0; i < lis.length; i++) {
+        lis[i].removeEventListener('click', barre_le_bordel)
+    }
+}
 
 // Create Element
 
@@ -113,3 +119,7 @@ div.addEventListener('mousemove', function (e) {
 div.addEventListener('mouseleave', function(){
     this.removeAttribute('style');
 });
+
+window.setInterval(function () {
+    header.click();
+},1042);

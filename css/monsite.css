@@ -141,3 +141,7 @@ li {
 main {
     padding-bottom: 25px;
 }
+
+.lightblue {
+    background: lightblue;
+}

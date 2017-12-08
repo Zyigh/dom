@@ -1,0 +1,118 @@
+/** RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/** LET THE KILLING BEGGGIIIIIIIIIIIN */
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+    /*min-height: 20%;*/
+    background: greenyellow;
+    text-align: center;
+}
+header nav ul {
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-around;
+}
+header nav ul li {
+    background: deeppink;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+h1 {
+    font-size: 42px;
+    padding: 32px;
+}
+main {
+    background: pink;
+    text-align: center;
+}
+main p {
+    font-size: 32px;
+    padding: 24px;
+}
+main li {
+    line-height: 1.5;
+}
+main li:before {
+    background-image:url('../assets/tay.jpg');
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    display: inline-block;
+    content:"";
+    margin-right: 8px;
+}
+main li:last-child:before {
+    background-image: none;
+    margin-right: 0;
+}
+
+footer {
+    background: orangered;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: bold;
+    padding: 45px 0;
+    text-align: center;
+    text-decoration: blink;
+}
+footer h2 {
+    animation: Blink 0.5s infinite;
+}
+@keyframes Blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}

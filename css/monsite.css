@@ -116,3 +116,7 @@ footer h2 {
     50%{opacity: 0;}
     100%{opacity: 1;}
 }
+
+.barre {
+    text-decoration: line-through;
+}

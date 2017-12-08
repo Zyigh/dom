@@ -1,4 +1,4 @@
-var lis = document.querySelectorAll('main li');
+//var lis = document.querySelectorAll('main li');
 // var nav_lis = document.querySelectorAll('nav li');
 // var temp_array_for_reversing_word = [];
 //
@@ -20,7 +20,7 @@ var lis = document.querySelectorAll('main li');
 
 // Events
 
-var header = document.querySelector('header');
+//var header = document.querySelector('header');
 
     // On self by using global selector
 
@@ -73,12 +73,43 @@ var main = document.querySelector('main');
 //    this.classList.toggle('barre');
 //}
 
-for (var i = 0, len = lis.length; i < len - 1; i++) {
-    lis[i].addEventListener('click', barre_le_bordel);
-}
+//for (var i = 0, len = lis.length; i < len - 1; i++) {
+//    lis[i].addEventListener('click', barre_le_bordel);
+//}
 
         // Remove
 //function barre_le_bordel() {
 //    this.classList.toggle('barre');
 //    this.removeEventListener('click', barre_le_bordel)
 //}
+
+
+// Create Element
+
+var div = document.createElement('div');
+div.setAttribute('id', 'how_fun');
+div.classList.add('created_div');
+div.innerHTML = "YOOOOOOLLOOOOOOOOO";
+main.appendChild(div);
+
+// Add event
+
+div.addEventListener('mousemove', function (e) {
+    var color = '';
+    var pos_color = '';
+    if (Math.random() > 0.5) {
+        color = 'white';
+        pos_color = '#' + e.clientX.toString() + e.layerX.toString();
+    } else {
+        color = 'black';
+        pos_color = '#' + e.clientY.toString() + e.layerY.toString();
+    }
+    while (pos_color.length > 7) {
+        pos_color = pos_color.substring(0, pos_color.length - 1);
+    }
+    this.setAttribute('style', 'background:' + color + ';color:' + pos_color +';');
+});
+
+div.addEventListener('mouseleave', function(){
+    this.removeAttribute('style');
+});

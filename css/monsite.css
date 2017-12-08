@@ -127,3 +127,17 @@ li {
 .darkred {
     background-color: darkred;
 }
+
+/** Elements Created with JS */
+
+.created_div {
+    width: 350px;
+    height: 150px;
+    margin: 25px auto;
+    padding-bottom: 25px;
+    background-color: yellow;
+}
+
+main {
+    padding-bottom: 25px;
+}
